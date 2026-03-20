@@ -1,0 +1,112 @@
+/* === RESET BÁSICO === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === FUNDO DO ECRÃ === */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    /* Um gradiente suave e moderno */
+    background: linear-gradient(135deg, #ece9e6, #ffffff); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* === CAIXA PRINCIPAL === */
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    width: 380px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* Sombra mais suave */
+    border-top: 5px solid #009c3b; /* Detalhe em verde no topo */
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* === ÁREA DO LOGOTIPO E TÍTULO === */
+.logo-area {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.logo-area img {
+    width: 90px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.logo-area h1 {
+    font-size: 24px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* === CAMPOS DE DIGITAÇÃO (INPUTS) === */
+.form input {
+    width: 100%;
+    padding: 14px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    text-align: center; /* Fica melhor para digitar apenas a idade */
+    transition: 0.3s;
+}
+
+/* Efeito ao clicar no input */
+.form input:focus {
+    border-color: #009c3b;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 156, 59, 0.2);
+}
+
+/* === BOTÃO DE VERIFICAR === */
+.form button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    /* Gradiente verde para o botão */
+    background: linear-gradient(135deg, #009c3b, #007a2e);
+    color: #ffffff;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o rato (mouse) no botão */
+.form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 156, 59, 0.4);
+}
+
+/* === CAIXA DE RESULTADO === */
+.resultado {
+    margin-top: 25px;
+    padding: 20px;
+    background: #222222; /* Fundo escuro para destacar o texto colorido do JS */
+    border-radius: 10px;
+    display: none; /* Escondido até o JavaScript o ativar */
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+    border-left: 4px solid #ffdf00; /* Detalhe em amarelo */
+}
+
+/* === ANIMAÇÃO DE ENTRADA === */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
