@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      #Ajuda o hot reload a funcionar no Windows/MacOS
+      WATCHPACK_MODE_POLLING: "true"
