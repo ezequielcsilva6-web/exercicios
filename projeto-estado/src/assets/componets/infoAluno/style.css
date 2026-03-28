@@ -1,0 +1,40 @@
+/* Container principal do cartão */
+.info-aluno {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000000;
+  border: 1px solid #0de618;
+  border-radius: 10px;
+  padding: 24px;
+  max-width: 350px;
+  margin: 20px auto; /* Centraliza o cartão horizontalmente */
+  box-shadow: 0 4px 12px rgb(0, 0, 0); /* Sombra suave */
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Efeito de hover (quando passa o mouse por cima) */
+.info-aluno:hover {
+  transform: translateY(-5px);
+}
+
+/* Título principal */
+.info-aluno h2 {
+  color: #ffffff;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #00ff55; /* Linha azul de destaque */
+  padding-bottom: 10px;
+}
+
+/* Parágrafos com as informações */
+.info-aluno p {
+  color: #faf8f8;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 10px 0;
+  background-color: #181818;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border-left: 4px solid #00ff00; /* Detalhe lateral nas informações */
+}

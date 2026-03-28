@@ -1,0 +1,161 @@
+/* Configurações básicas para garantir consistência */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f7f6;
+    margin: 0;
+}
+
+/* Container principal centralizado */
+.container-cadastro {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos h2 */
+.container-cadastro h2 {
+    color: #333;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+/* Estilização do Formulário */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os elementos do form */
+}
+
+/* Containers para label + input */
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo-input label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Estilo padrão para os campos de input */
+.formulario input[type="text"],
+.formulario input[type="email"] {
+    padding: 12px 15px;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none; /* Remove o contorno padrão do navegador */
+}
+
+/* Efeito de foco nos inputs */
+.formulario input:focus {
+    border-color: #4a90e2; /* Azul destaque */
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+/* Botão de Adicionar */
+.botao-adicionar {
+    background-color: #4caf50; /* Verde */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+.botao-adicionar:hover {
+    background-color: #43a047;
+}
+
+/* Efeito de clique no botão */
+.botao-adicionar:active {
+    transform: scale(0.98);
+}
+
+/* Linha divisória horizontal */
+.container-cadastro hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 30px 0;
+}
+
+/* Seção da Lista de Alunos */
+.secao-lista h2 {
+    color: #555;
+    font-size: 1.3rem;
+}
+
+.lista-vazia {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+}
+
+.lista-alunos {
+    list-style-type: none; /* Remove as bolinhas da lista */
+    padding: 0;
+    margin: 0;
+}
+
+/* Item individual da lista */
+.item-aluno {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between; /* Alinha nome à esquerda e email à direita */
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.item-aluno:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo do nome dentro da lista */
+.aluno-nome {
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Estilo do email dentro da lista */
+.aluno-email {
+    color: #666;
+    font-size: 0.9rem;
+    background-color: #e3f2fd; /* Fundo azul clarinho */
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+    .container-cadastro {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    .item-aluno {
+        flex-direction: column; /* Empilha nome e email em telas pequenas */
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
